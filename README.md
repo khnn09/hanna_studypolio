@@ -11,10 +11,11 @@
 
 </br>
 
-## Today_I_Learned
+## [Today_I_Learned](https://velog.io/@khnn)
 
-| Date | Link | Tag |
+
+| Tool | Link | About |
 | --------------- | --------------- | --------------- |
-| Row 1 Column 1 | Row 1 Column 2 | Row 1 Column 3 |
-| Row 2 Column 1 | Row 2 Column 2 | Row 2 Column 3 |
-| Row 3 Column 1 | Row 3 Column 2 | Row 3 Column 3 |
+| SQL | [FLOAT+ROUND](https://velog.io/@khnn/TIL-FLOAT-ROUND) | Problem with rounding up float values |
+| Python | [f 쓰고.. 점은...?](https://velog.io/@khnn/python-f-쓰고..점은-어디-찍는다고) | Using period in f string formatting |
+| Data Analysis | [빅데이터의 충격](https://velog.io/@khnn/TIL-빅데이터의-충격) | Encountering big data |
