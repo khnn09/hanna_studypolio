@@ -4,15 +4,16 @@
 </p>
 ### Endless Sapjil and Few Results
 ***
+
 ## Scraping
 - [#1 Netflix Ranking](scraping_netflix_second_trial.html)
 - [#2 Aehobak](scraping_aehobak.html)
 - [#3 Running Man](scraping_runningman.html)
 
-</br>
+
+
 
 ## [Today_I_Learned](https://velog.io/@khnn)
-
 
 | Tool | Link | About |
 | --------------- | --------------- | --------------- |
