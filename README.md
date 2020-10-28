@@ -2,7 +2,7 @@
 <p align="center">
   <img src="https://images.unsplash.com/photo-1516782522590-682f9816631d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1990&q=80"/>
 </p>
-### Endless Sapjil and Few Results
+### Endless Sapjil and A Few Results
 ***
 
 ## Scraping
@@ -11,7 +11,7 @@
 - [#3 Running Man](scraping_runningman.html)
 
 
-
+***
 
 ## [Today_I_Learned](https://velog.io/@khnn)
 
