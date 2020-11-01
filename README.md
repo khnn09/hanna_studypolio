@@ -10,7 +10,7 @@
 - [#1 Netflix Ranking](scraping_netflix_second_trial.html)
 - [#2 Aehobak](scraping_aehobak.html)
 - [#3 Running Man](scraping_runningman.html)
-
+- [#4 Number of Stores](scraping_stores_togu.html)
 
 ***
 
