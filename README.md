@@ -9,9 +9,9 @@
 ## Scraping
 - [#1 Netflix Ranking](scraping_netflix_second_trial.html)
 - [#2 Aehobak](scraping_aehobak.html)
-- [#2-1 Aehobak_Class](scraping_aehobak_retail.html)
+- [#2-1 Aehobak_Retail Price](scraping_aehobak_retail.html)
 - [#3 Running Man](scraping_runningman.html)
-- [#4 Number of Stores](scraping_stores_togu.html)
+- [#4 Number of Stores In Seoul](scraping_stores_togu.html)
 
 
 ***
