@@ -13157,10 +13157,10 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">table</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># table</span>
 </pre></div>
 
     </div>
@@ -13309,8 +13309,8 @@ div#notebook {
 <span class="c1"># 행 하나씩 append로 붙여주기</span>
 <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">table</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;tr&quot;</span><span class="p">)[</span><span class="mi">5</span><span class="p">:]:</span>
     <span class="n">going</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">going</span><span class="p">)</span> <span class="o">==</span> <span class="mi">11</span><span class="p">:</span> <span class="c1"># 지역이 함께 표시된 경우 loca=지역으로 지정</span>
-        <span class="n">loca</span> <span class="o">=</span> <span class="n">going</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">going</span><span class="p">)</span> <span class="o">==</span> <span class="mi">11</span><span class="p">:</span> <span class="c1"># 열 수가 11개인 (지역이 새로 표시되는) 경우 지역을 변수로 지정해줌</span>
+        <span class="n">loca</span> <span class="o">=</span> <span class="n">going</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1">#loca=지역으로 지정</span>
         <span class="k">del</span> <span class="n">going</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">going</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span><span class="n">loca</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span><span class="n">going</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>   <span class="c1"># 업체 이름 앞에 지역 추가</span>
     <span class="n">datafr</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="n">going</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="n">column_name</span><span class="p">)</span>
@@ -13688,7 +13688,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Only-Dates,-Turn-Price-to-Integer">Only Dates, Turn Price to Integer<a class="anchor-link" href="#Only-Dates,-Turn-Price-to-Integer">&#182;</a></h2><p>Previous table includes other data aside from last week.(price from a month ago, a year ago, etc.)<br>
+<h2 id="Leave-Only-Dates,-Turn-Price-to-Integer">Leave Only Dates, Turn Price to Integer<a class="anchor-link" href="#Leave-Only-Dates,-Turn-Price-to-Integer">&#182;</a></h2><p>Previous table includes other data aside from last week.(price from a month ago, a year ago, etc.)<br>
 This can sometime be of no use when we are trying to get price information on a specific date.<br>
 <br>
 Also, as the data type of price info is string, we'll change that to integer.</p>
@@ -13800,23 +13800,23 @@ Also, as the data type of price info is string, we'll change that to integer.</p
   <tbody>
     <tr>
       <th>0</th>
-      <td>서울 C-유통</td>
-      <td>1180</td>
-      <td>1180</td>
-      <td>1180</td>
-      <td>1180</td>
-      <td>1180</td>
-      <td>1180</td>
+      <td>울산 신정</td>
+      <td>1000</td>
+      <td>1000</td>
+      <td>1000</td>
+      <td>1000</td>
+      <td>1000</td>
+      <td>1000</td>
     </tr>
     <tr>
       <th>0</th>
-      <td>청주 B-유통</td>
-      <td>490</td>
-      <td>490</td>
-      <td>490</td>
-      <td>700</td>
-      <td>700</td>
-      <td>590</td>
+      <td>전주 C-유통</td>
+      <td>1180</td>
+      <td>1180</td>
+      <td>1180</td>
+      <td>1180</td>
+      <td>1180</td>
+      <td>1180</td>
     </tr>
   </tbody>
 </table>
@@ -16687,6 +16687,718 @@ Also, as the data type of price info is string, we'll change that to integer.</p
 
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">monday</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;11-02&#39;</span><span class="p">,</span> <span class="s1">&#39;10-26&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">monday</span><span class="p">)):</span>
+    <span class="n">exec</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;df</span><span class="si">{i}</span><span class="s1"> = Scrape_aehobak(monday[i]).scrape_data()&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df0</span><span class="p">,</span><span class="n">df1</span><span class="p">])</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;구분_지역&#39;</span><span class="p">,</span> <span class="s1">&#39;구분&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[29]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>11/02</th>
+      <th>10/30</th>
+      <th>10/29</th>
+      <th>10/28</th>
+      <th>10/27</th>
+      <th>10/26</th>
+      <th>10/23</th>
+      <th>10/22</th>
+      <th>10/21</th>
+      <th>10/20</th>
+    </tr>
+    <tr>
+      <th>구분_지역</th>
+      <th>구분</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="2" valign="top">강릉</th>
+      <th>A-유통</th>
+      <td>1490.0</td>
+      <td>1490.0</td>
+      <td>1490.0</td>
+      <td>1790.0</td>
+      <td>1790.0</td>
+      <td>1790.0</td>
+      <td>1790.0</td>
+      <td>1790.0</td>
+      <td>1490.0</td>
+      <td>1490.0</td>
+    </tr>
+    <tr>
+      <th>중앙</th>
+      <td>1500.0</td>
+      <td>1500.0</td>
+      <td>1500.0</td>
+      <td>1500.0</td>
+      <td>1500.0</td>
+      <td>1500.0</td>
+      <td>1500.0</td>
+      <td>1500.0</td>
+      <td>1500.0</td>
+      <td>1500.0</td>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">광주</th>
+      <th>A-유통</th>
+      <td>1490.0</td>
+      <td>1490.0</td>
+      <td>1490.0</td>
+      <td>1790.0</td>
+      <td>1790.0</td>
+      <td>1790.0</td>
+      <td>1790.0</td>
+      <td>1790.0</td>
+      <td>1490.0</td>
+      <td>1490.0</td>
+    </tr>
+    <tr>
+      <th>C-유통</th>
+      <td>1180.0</td>
+      <td>1080.0</td>
+      <td>1080.0</td>
+      <td>1080.0</td>
+      <td>1080.0</td>
+      <td>1080.0</td>
+      <td>1080.0</td>
+      <td>1080.0</td>
+      <td>1080.0</td>
+      <td>1080.0</td>
+    </tr>
+    <tr>
+      <th>양동</th>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">대구</th>
+      <th>A-유통</th>
+      <td>1490.0</td>
+      <td>1490.0</td>
+      <td>1490.0</td>
+      <td>1790.0</td>
+      <td>1790.0</td>
+      <td>1790.0</td>
+      <td>1790.0</td>
+      <td>1250.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+    </tr>
+    <tr>
+      <th>C-유통</th>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>990.0</td>
+      <td>990.0</td>
+    </tr>
+    <tr>
+      <th>동구</th>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">대전</th>
+      <th>C-유통</th>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1380.0</td>
+      <td>1380.0</td>
+    </tr>
+    <tr>
+      <th>E-유통</th>
+      <td>990.0</td>
+      <td>990.0</td>
+      <td>990.0</td>
+      <td>1280.0</td>
+      <td>1280.0</td>
+      <td>1280.0</td>
+      <td>1280.0</td>
+      <td>1280.0</td>
+      <td>990.0</td>
+      <td>990.0</td>
+    </tr>
+    <tr>
+      <th>역전</th>
+      <td>1100.0</td>
+      <td>1100.0</td>
+      <td>1100.0</td>
+      <td>1100.0</td>
+      <td>1100.0</td>
+      <td>1100.0</td>
+      <td>1100.0</td>
+      <td>1100.0</td>
+      <td>1100.0</td>
+      <td>1100.0</td>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">부산</th>
+      <th>A-유통</th>
+      <td>1490.0</td>
+      <td>1490.0</td>
+      <td>1490.0</td>
+      <td>1790.0</td>
+      <td>1790.0</td>
+      <td>1790.0</td>
+      <td>1790.0</td>
+      <td>1790.0</td>
+      <td>1490.0</td>
+      <td>1490.0</td>
+    </tr>
+    <tr>
+      <th>D-유통</th>
+      <td>1190.0</td>
+      <td>890.0</td>
+      <td>890.0</td>
+      <td>890.0</td>
+      <td>1190.0</td>
+      <td>1190.0</td>
+      <td>1190.0</td>
+      <td>1190.0</td>
+      <td>1190.0</td>
+      <td>990.0</td>
+    </tr>
+    <tr>
+      <th>부전</th>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>900.0</td>
+      <td>900.0</td>
+      <td>900.0</td>
+      <td>900.0</td>
+      <td>900.0</td>
+      <td>1000.0</td>
+    </tr>
+    <tr>
+      <th rowspan="8" valign="top">서울</th>
+      <th>A-유통</th>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1250.0</td>
+      <td>1250.0</td>
+      <td>1250.0</td>
+      <td>1250.0</td>
+      <td>1250.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+    </tr>
+    <tr>
+      <th>B-유통</th>
+      <td>950.0</td>
+      <td>1050.0</td>
+      <td>1050.0</td>
+      <td>1050.0</td>
+      <td>1050.0</td>
+      <td>1050.0</td>
+      <td>1050.0</td>
+      <td>1050.0</td>
+      <td>990.0</td>
+      <td>990.0</td>
+    </tr>
+    <tr>
+      <th>C-유통</th>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>990.0</td>
+      <td>990.0</td>
+    </tr>
+    <tr>
+      <th>E-유통</th>
+      <td>990.0</td>
+      <td>990.0</td>
+      <td>990.0</td>
+      <td>1280.0</td>
+      <td>1280.0</td>
+      <td>1280.0</td>
+      <td>1280.0</td>
+      <td>1280.0</td>
+      <td>990.0</td>
+      <td>990.0</td>
+    </tr>
+    <tr>
+      <th>F-유통</th>
+      <td>990.0</td>
+      <td>990.0</td>
+      <td>990.0</td>
+      <td>1280.0</td>
+      <td>1280.0</td>
+      <td>1280.0</td>
+      <td>1280.0</td>
+      <td>1280.0</td>
+      <td>990.0</td>
+      <td>990.0</td>
+    </tr>
+    <tr>
+      <th>경동</th>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>900.0</td>
+    </tr>
+    <tr>
+      <th>복조리</th>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1160.0</td>
+    </tr>
+    <tr>
+      <th>영등포</th>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+    </tr>
+    <tr>
+      <th>세종</th>
+      <th>C-유통</th>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>990.0</td>
+      <td>990.0</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">수원</th>
+      <th>B-유통</th>
+      <td>990.0</td>
+      <td>1080.0</td>
+      <td>1080.0</td>
+      <td>1080.0</td>
+      <td>1080.0</td>
+      <td>1080.0</td>
+      <td>1080.0</td>
+      <td>1080.0</td>
+      <td>990.0</td>
+      <td>990.0</td>
+    </tr>
+    <tr>
+      <th>지동</th>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">순천</th>
+      <th>A-유통</th>
+      <td>1490.0</td>
+      <td>1490.0</td>
+      <td>1490.0</td>
+      <td>1790.0</td>
+      <td>1790.0</td>
+      <td>1790.0</td>
+      <td>1790.0</td>
+      <td>1790.0</td>
+      <td>1490.0</td>
+      <td>1490.0</td>
+    </tr>
+    <tr>
+      <th>역전</th>
+      <td>1160.0</td>
+      <td>1160.0</td>
+      <td>1160.0</td>
+      <td>1160.0</td>
+      <td>1160.0</td>
+      <td>1160.0</td>
+      <td>1160.0</td>
+      <td>1160.0</td>
+      <td>1160.0</td>
+      <td>1160.0</td>
+    </tr>
+    <tr>
+      <th>안동</th>
+      <th>C-유통</th>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>990.0</td>
+      <td>990.0</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">울산</th>
+      <th>A-유통</th>
+      <td>1490.0</td>
+      <td>1490.0</td>
+      <td>1490.0</td>
+      <td>1790.0</td>
+      <td>1790.0</td>
+      <td>1790.0</td>
+      <td>1790.0</td>
+      <td>1790.0</td>
+      <td>1490.0</td>
+      <td>1490.0</td>
+    </tr>
+    <tr>
+      <th>신정</th>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1160.0</td>
+      <td>1160.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+    </tr>
+    <tr>
+      <th>의정부</th>
+      <th>A-유통</th>
+      <td>1490.0</td>
+      <td>1490.0</td>
+      <td>1490.0</td>
+      <td>1790.0</td>
+      <td>1790.0</td>
+      <td>1790.0</td>
+      <td>1790.0</td>
+      <td>1790.0</td>
+      <td>1490.0</td>
+      <td>1490.0</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">인천</th>
+      <th>E-유통</th>
+      <td>990.0</td>
+      <td>990.0</td>
+      <td>990.0</td>
+      <td>1280.0</td>
+      <td>1280.0</td>
+      <td>1280.0</td>
+      <td>1280.0</td>
+      <td>1280.0</td>
+      <td>990.0</td>
+      <td>990.0</td>
+    </tr>
+    <tr>
+      <th>현대</th>
+      <td>900.0</td>
+      <td>900.0</td>
+      <td>900.0</td>
+      <td>900.0</td>
+      <td>900.0</td>
+      <td>900.0</td>
+      <td>900.0</td>
+      <td>900.0</td>
+      <td>900.0</td>
+      <td>1000.0</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">전주</th>
+      <th>C-유통</th>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>990.0</td>
+      <td>990.0</td>
+    </tr>
+    <tr>
+      <th>남부</th>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">제주</th>
+      <th>C-유통</th>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>990.0</td>
+      <td>990.0</td>
+    </tr>
+    <tr>
+      <th>동문</th>
+      <td>1160.0</td>
+      <td>1160.0</td>
+      <td>1160.0</td>
+      <td>1160.0</td>
+      <td>1160.0</td>
+      <td>1160.0</td>
+      <td>1160.0</td>
+      <td>1160.0</td>
+      <td>1160.0</td>
+      <td>1160.0</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">창원</th>
+      <th>C-유통</th>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>1180.0</td>
+      <td>990.0</td>
+      <td>990.0</td>
+    </tr>
+    <tr>
+      <th>상남</th>
+      <td>1060.0</td>
+      <td>1060.0</td>
+      <td>1060.0</td>
+      <td>1060.0</td>
+      <td>1060.0</td>
+      <td>1060.0</td>
+      <td>1060.0</td>
+      <td>1060.0</td>
+      <td>1060.0</td>
+      <td>1160.0</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">청주</th>
+      <th>B-유통</th>
+      <td>490.0</td>
+      <td>490.0</td>
+      <td>700.0</td>
+      <td>700.0</td>
+      <td>590.0</td>
+      <td>990.0</td>
+      <td>990.0</td>
+      <td>990.0</td>
+      <td>990.0</td>
+      <td>990.0</td>
+    </tr>
+    <tr>
+      <th>육거리</th>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1160.0</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">춘천</th>
+      <th>E-유통</th>
+      <td>990.0</td>
+      <td>990.0</td>
+      <td>990.0</td>
+      <td>1280.0</td>
+      <td>1280.0</td>
+      <td>1280.0</td>
+      <td>1280.0</td>
+      <td>1280.0</td>
+      <td>990.0</td>
+      <td>990.0</td>
+    </tr>
+    <tr>
+      <th>중앙</th>
+      <td>1160.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">포항</th>
+      <th>E-유통</th>
+      <td>990.0</td>
+      <td>990.0</td>
+      <td>990.0</td>
+      <td>1280.0</td>
+      <td>1280.0</td>
+      <td>1280.0</td>
+      <td>1280.0</td>
+      <td>1280.0</td>
+      <td>990.0</td>
+      <td>990.0</td>
+    </tr>
+    <tr>
+      <th>죽도</th>
+      <td>1000.0</td>
+      <td>1160.0</td>
+      <td>1160.0</td>
+      <td>1160.0</td>
+      <td>1160.0</td>
+      <td>1160.0</td>
+      <td>1160.0</td>
+      <td>1160.0</td>
+      <td>1330.0</td>
+      <td>1330.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
 </div>
 </div>
 
